@@ -718,6 +718,10 @@
   margin: 1.8rem 0;
 }
 
+.claim-grid--2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
 .claim {
   background: var(--page-raised);
   border: 1px solid var(--page-border);
@@ -1050,6 +1054,28 @@
   color: var(--gold-text);
   display: block;
   margin-bottom: 0.4rem;
+}
+
+/* indicator tables inside a role panel */
+.role-indicators {
+  margin-top: 1.3rem;
+  padding-top: 1.1rem;
+  border-top: 1px dashed var(--page-border-strong);
+}
+
+.role-indicators .re-label {
+  font-family: var(--mono);
+  font-size: 0.6rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gold-text);
+  display: block;
+  margin-bottom: 0.6rem;
+}
+
+.role-indicators .data-table td .chip {
+  margin-right: 0.45rem;
+  vertical-align: baseline;
 }
 
 .role-evidence ul {
@@ -1816,7 +1842,8 @@
 }
 
 @media (max-width: 900px) {
-  .claim-grid {
+  .claim-grid,
+  .claim-grid--2 {
     grid-template-columns: 1fr;
   }
 
@@ -1985,4 +2012,103 @@
     grid-template-columns: 1fr auto;
   }
   .bar-label { grid-column: 1 / -1; }
+}
+
+/* ── LINKED TILES AND CARDS (home) ── */
+
+a.stat,
+a.card--link {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+
+a.stat {
+  position: relative;
+  transition: background var(--dur-fast);
+}
+
+a.stat:hover {
+  background: var(--page-surface);
+}
+
+a.stat:focus-visible {
+  outline: 2px solid var(--gold-text);
+  outline-offset: -3px;
+}
+
+.stat-go,
+.card-go {
+  display: block;
+  font-family: var(--mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gold-text);
+}
+
+.stat-go {
+  margin-top: 0.7rem;
+}
+
+.card-go {
+  margin-top: 1.1rem;
+}
+
+.stat-go::after,
+.card-go::after {
+  content: '→';
+  display: inline-block;
+  margin-left: 0.55em;
+  transition: transform var(--dur-fast);
+}
+
+a.stat:hover .stat-go::after,
+a.card--link:hover .card-go::after {
+  transform: translateX(4px);
+}
+
+a.card--link:hover .card-title {
+  text-decoration: underline;
+  text-decoration-color: var(--page-gold);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
+}
+
+a.card--link:focus-visible {
+  outline: 2px solid var(--gold-text);
+  outline-offset: 3px;
+}
+
+a.card--link .chip {
+  margin-top: 0.9rem;
+}
+
+.card-num {
+  font-family: var(--mono);
+  font-size: 0.65rem;
+  color: var(--gold-text);
+  letter-spacing: 0.1em;
+  margin-bottom: 0.4rem;
+}
+
+/* artistic-work figures (for images and recordings added to lab pages) */
+
+.work-figure {
+  margin: 0;
+}
+
+.work-figure img,
+.work-figure video {
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--page-border);
+  border-radius: var(--r-sm);
+}
+
+.work-figure figcaption {
+  margin-top: 0.5rem;
+  font-size: 0.8rem;
+  line-height: 1.5;
+  color: var(--ink-muted);
 }
