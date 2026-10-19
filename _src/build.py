@@ -49,7 +49,7 @@ PAGES = [
     ('supervision',        '12', 'Supervision',           'Supervision',
      'The supervisory team, the meetings on record, and how supervision has shaped the trajectory.', None, 'assess'),
     ('training',           '13', 'Training & Curriculum', 'Training & Curriculum',
-     'Training record: the collective programme, individual units and teaching, with 27.67 EC recorded and what remains to be confirmed.', None, 'assess'),
+     'Training record: the collective programme, individual units and teaching, with 30 EC recorded, the conference elements and what remains to be added.', None, 'assess'),
     ('research-teaching',  '14', 'Research ↔ Teaching',   'Research ↔ Teaching',
      'How research and teaching feed each other across the four iterations of the AI course.', None, 'assess'),
     ('dissemination',      '15', 'Dissemination',         'Dissemination',
@@ -244,6 +244,7 @@ def render(idx):
     <footer class="site-footer">
       <span>© 2023–2026 Agustín Martínez Caram · PD Arts + Creative, Hanze University of Applied Sciences · Registered trajectory June 2023 – May 2027</span>
       <span>Updated {UPDATED} · <a href="updates.html">What changed since March</a></span>
+      <span class="footer-elsewhere">Elsewhere: <a href="https://www.martinezcaram.com/" target="_blank" rel="noopener">martinezcaram.com ↗</a> · <a href="https://www.researchcatalogue.net/view/2952757/3715989" target="_blank" rel="noopener">Research Catalogue ↗</a> · <a href="https://www.pd-arts-creative.nl/about/how" target="_blank" rel="noopener">PD programme ↗</a> · <a href="https://github.com/jannacek?tab=repositories" target="_blank" rel="noopener">GitHub ↗</a></span>
     </footer>
   </main>
   {script_tags}

@@ -2112,3 +2112,8 @@ a.card--link .chip {
   line-height: 1.5;
   color: var(--ink-muted);
 }
+
+/* Footer: links to the wider online work, on their own line */
+.footer-elsewhere {
+  flex-basis: 100%;
+}
